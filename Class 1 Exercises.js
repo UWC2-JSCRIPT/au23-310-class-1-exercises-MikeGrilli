@@ -5,8 +5,8 @@
 // 1. Pagliacci charges $16.99 for a 13” pizza and $19.99 for a 17” pizza.
 // What is the area for each of these pizzas?
 // (radius would be the listed size - i.e. 13" - divided by 2)
-const ONE_SMALL_PiZZA  = 16.99
-const ONE_LARGE_PIZZA  = 19.99 
+const THIRTEEN_INCH_PiZZA  = 16.99
+const SEVENTEEN_INCH_PIZZA  = 19.99 
 
 // 2. What is the cost per square inch of each pizza?
 
