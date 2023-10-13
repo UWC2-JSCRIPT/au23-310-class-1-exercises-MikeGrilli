@@ -10,40 +10,37 @@ const SEVENTEEN_INCH_PIZZA_PRICE  = 19.99
 const THIRTEEN_INCH_PiZZA_RADIOUS = 13
 const SEVENTEEN_INCH_PIZZA_RADIOUS = 17
 
+console.log(`FIND AREA`)
 let getYouPizzasArea = (pizza) => {
     let getAreaOfYourPizza = Math.ceil(Math.PI * pizza * pizza)
     return `The "AREA" of a ${pizza} inch pizza is ${getAreaOfYourPizza}`
  }
  
- 
- console.log(`FIND AREA`)
  console.log(getYouPizzasArea(THIRTEEN_INCH_PiZZA_RADIOUS))
  console.log(getYouPizzasArea(SEVENTEEN_INCH_PIZZA_RADIOUS))
 
 
 // 2. What is the cost per square inch of each pizza?
-
+console.log(` `)
+console.log(`FIND PRICE PER SQUARE INCH`)
 const pricePerSquareInch = (pizza, price) => {
     let getAreaOfYourPizza = Math.ceil(Math.PI * pizza * pizza)
     let getpricePerSquareinch = Math.ceil(getAreaOfYourPizza / price)
     return `The price of ${pizza} inch pizza is $${getpricePerSquareinch}`
 }
 
-console.log(` `)
-console.log(`FIND PRICE PER SQUARE INCH`)
 console.log(pricePerSquareInch(THIRTEEN_INCH_PiZZA_RADIOUS,THIRTEEN_INCH_PiZZA_PRICE))
 console.log(pricePerSquareInch(SEVENTEEN_INCH_PIZZA_RADIOUS,SEVENTEEN_INCH_PIZZA_PRICE))
 
 // 3. Using the Math object, put together a code snippet
 // that allows you to draw a random card with a value
 // between 1 and 13 (assume ace is 1, jack is 11…)
-
+console.log(` `)
+console.log(`RANDOM CARD 1-13`)
 let drawRandomCard = () => {
   let card = Math.ceil(Math.random() * 13)
   console.log(`You drew: ${card}`)
 }
-console.log(` `)
-console.log(`RANDOM CARD 1-13`)
 drawRandomCard()
 // 4. Draw 3 cards and use Math to determine the highest
 // card
