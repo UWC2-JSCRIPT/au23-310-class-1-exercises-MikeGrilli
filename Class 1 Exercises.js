@@ -68,18 +68,19 @@ let getLargestNumberBack = () => {
 console.log(` `)
 console.log(`Mailing address`)
 let firstName = `Mike`
-let LastName = `Grilli`
+let lastName = `Grilli`
 let streetAddress = `2428 NW Market St`
 let city = `Seattle`
 let state = `WA`
 let zipCode = `98107`
 
 let mailingAddress = `
-    ${firstName} ${LastName} \n\
+    ${firstName} ${lastName} \n\
     ${streetAddress} \n\ 
     ${city}, ${state} ${zipCode}`
 
 console.log(mailingAddress)
+
 // 2. You are given a string in this format:
 // firstName lastName(assume no spaces in either)
 // streetAddress
@@ -87,7 +88,17 @@ console.log(mailingAddress)
 // 
 // Write code that is able to extract the first name from this string into a variable.
 // Hint: use indexOf, slice, and / or substring
+console.log(` `)
+console.log(`Mailing address`)
 
+let perSonalInformation = `Mike Grilli 2428 NW Market St Seattle WA 98107`
+
+let getFistName = () => {
+    let extractFirstName = perSonalInformation.slice(0,5)
+    console.log(extractFirstName)
+}
+
+getFistName()
 
 /**
  * FIND THE MIDDLE DATE
