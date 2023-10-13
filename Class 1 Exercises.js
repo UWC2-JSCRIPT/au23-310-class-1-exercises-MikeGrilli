@@ -7,30 +7,30 @@
 // (radius would be the listed size - i.e. 13" - divided by 2)
 const THIRTEEN_INCH_PiZZA_PRICE  = 16.99
 const SEVENTEEN_INCH_PIZZA_PRICE  = 19.99 
-const THIRTEEN_INCH_PiZZA_RADIOUS = 13
-const SEVENTEEN_INCH_PIZZA_RADIOUS = 17
+const THIRTEEN_INCH_PiZZA_DIAMETER = 13
+const SEVENTEEN_INCH_PIZZA_DIAMETER = 17
 
 console.log(`FIND AREA`)
 let getYouPizzasArea = (pizza) => {
-    let getAreaOfYourPizza = Math.ceil(Math.PI * pizza * pizza)
+    let getAreaOfYourPizza = Math.ceil(Math.PI * Math.pow(pizza,2))
     return `The "AREA" of a ${pizza} inch pizza is ${getAreaOfYourPizza}`
  }
  
- console.log(getYouPizzasArea(THIRTEEN_INCH_PiZZA_RADIOUS))
- console.log(getYouPizzasArea(SEVENTEEN_INCH_PIZZA_RADIOUS))
+ console.log(getYouPizzasArea(THIRTEEN_INCH_PiZZA_DIAMETER))
+ console.log(getYouPizzasArea(SEVENTEEN_INCH_PIZZA_DIAMETER))
 
 
 // 2. What is the cost per square inch of each pizza?
 console.log(` `)
 console.log(`FIND PRICE PER SQUARE INCH`)
 const pricePerSquareInch = (pizza, price) => {
-    let getAreaOfYourPizza = Math.ceil(Math.PI * pizza * pizza)
-    let getpricePerSquareinch = Math.ceil(getAreaOfYourPizza / price)
+    let getAreaOfYourPizza = Math.ceil(Math.PI * Math.pow(pizza,2))
+    let getpricePerSquareinch = price / getAreaOfYourPizza
     return `The price of ${pizza} inch pizza is $${getpricePerSquareinch}`
 }
 
-console.log(pricePerSquareInch(THIRTEEN_INCH_PiZZA_RADIOUS,THIRTEEN_INCH_PiZZA_PRICE))
-console.log(pricePerSquareInch(SEVENTEEN_INCH_PIZZA_RADIOUS,SEVENTEEN_INCH_PIZZA_PRICE))
+console.log(pricePerSquareInch(THIRTEEN_INCH_PiZZA_DIAMETER,THIRTEEN_INCH_PiZZA_PRICE))
+console.log(pricePerSquareInch(SEVENTEEN_INCH_PIZZA_DIAMETER,SEVENTEEN_INCH_PIZZA_PRICE))
 
 // 3. Using the Math object, put together a code snippet
 // that allows you to draw a random card with a value
@@ -66,7 +66,7 @@ let getLargestNumberBack = () => {
 // this information to create a formatted address block
 // that could be printed onto an envelope.
 console.log(` `)
-console.log(`Mailing address`)
+console.log(`MAIL ADDRESS`)
 let firstName = `Mike`
 let lastName = `Grilli`
 let streetAddress = `2428 NW Market St`
@@ -89,7 +89,7 @@ console.log(mailingAddress)
 // Write code that is able to extract the first name from this string into a variable.
 // Hint: use indexOf, slice, and / or substring
 console.log(` `)
-console.log(`Mailing address`)
+console.log(`EXTRACT FIRST NAME`)
 
 let perSonalInformation = `Mike Grilli 2428 NW Market St Seattle WA 98107`
 
@@ -107,6 +107,17 @@ getFistName()
 // 1/1/2020 00:00:00 and 4/1/2020 00:00:00
 //
 // Look online for documentation on Date objects.
-
+console.log(` `)
+console.log(`FIND MIDDLE DATE`)
 // Starting hint:
+const startDate = new Date(2020, 1, 1);
 const endDate = new Date(2019, 3, 1);
+
+
+
+let findMiddleDate = (start,end) => {
+    const middleDate = new Date(start - (end-start)/2);
+    return middleDate
+}
+
+console.log(findMiddleDate(startDate,endDate))
