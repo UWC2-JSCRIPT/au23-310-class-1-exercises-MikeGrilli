@@ -8,6 +8,7 @@
 const THIRTEEN_INCH_PiZZA  = 16.99
 const SEVENTEEN_INCH_PIZZA  = 19.99 
 
+console.log(THIRTEEN_INCH_PiZZA);
 // 2. What is the cost per square inch of each pizza?
 
 
